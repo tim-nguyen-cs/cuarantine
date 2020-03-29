@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:cuarantine/main.dart';
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
 import './call.dart';
@@ -43,7 +44,7 @@ class IndexState extends State<IndexPage> {
                       errorText:
                           _validateError ? 'Channel name is mandatory' : null,
                       border: UnderlineInputBorder(
-                        borderSide: BorderSide(width: 1),
+                        borderSide: BorderSide(width: 2),
                       ),
                       hintText: 'Channel name',
                     ),
@@ -61,10 +62,22 @@ class IndexState extends State<IndexPage> {
                         color: Colors.blue,
                         textColor: Colors.white,
                       ),
-                    )
+                    ),
                   ],
                 ),
-              )
+              ),
+              RaisedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => VideoPlayerScreen()),
+                    );
+                  },
+                  color: Colors.blue,
+                  textColor: Colors.white,
+                  padding: EdgeInsets.all(10),
+                  child: Text('Beta Trial.')),
             ],
           ),
         ),
