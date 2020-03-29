@@ -1,4 +1,4 @@
-# collaborcise
+# cuarantine
 
 A new Flutter project.
 

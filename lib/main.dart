@@ -1,5 +1,5 @@
+import 'package:cuarantine/index.dart';
 import 'package:flutter/material.dart';
-
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -74,8 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Image.network(
-              'https://cloud.google.com/images/social-icon-google-cloud-1200-630.png'
-            ),
+                'https://cloud.google.com/images/social-icon-google-cloud-1200-630.png'),
             RaisedButton(
               onPressed: () {
                 Navigator.push(
@@ -86,25 +85,19 @@ class _MyHomePageState extends State<MyHomePage> {
               color: Colors.blue,
               textColor: Colors.white,
               padding: EdgeInsets.all(10),
-              child: Text(
-                'Collaborate.',
-                style: TextStyle(fontSize: 20)
-              ),
+              child: Text('Collaborate.', style: TextStyle(fontSize: 20)),
             ),
             RaisedButton(
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => CompetitiveView()),
+                  MaterialPageRoute(builder: (context) => IndexPage()),
                 );
               },
               color: Colors.blue,
               textColor: Colors.white,
               padding: EdgeInsets.all(10),
-              child: Text(
-                'Compete.',
-                style: TextStyle(fontSize: 20)
-              ),
+              child: Text('Compete.', style: TextStyle(fontSize: 20)),
             )
           ],
         ),
@@ -123,25 +116,6 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-class CollaborateView extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Collaborate With Others."),
-      ),
-      body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Go back!'),
-        ),
-      ),
-    );
-  }
-}
-
 class CompetitiveView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -150,11 +124,22 @@ class CompetitiveView extends StatelessWidget {
         title: Text("Workout With Friends."),
       ),
       body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Go back!'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            RaisedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => IndexPage()),
+                );
+              },
+              color: Colors.blue,
+              textColor: Colors.white,
+              padding: EdgeInsets.all(10),
+              child: Text('Stream.', style: TextStyle(fontSize: 20)),
+            ),
+          ],
         ),
       ),
     );
@@ -169,12 +154,14 @@ class ProfileView extends StatelessWidget {
         title: Text("Your Metrics & Statistics."),
       ),
       body: Center(
-        child: RaisedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Go back!'),
-        ),
+        child: Column(),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        tooltip: 'Go Back',
+        child: Icon(Icons.arrow_back),
       ),
     );
   }

@@ -1,4 +1,4 @@
-package com.example.collaborcise
+package com.example.cuarantine
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
