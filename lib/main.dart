@@ -108,7 +108,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => VideoPlayerScreen()),
+            MaterialPageRoute(builder: (context) => ProfileView()),
           );
         },
         tooltip: 'View Your Profile',
