@@ -1,8 +1,6 @@
 import 'package:cuarantine/index.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
-import 'package:charts_flutter/flutter.dart' as charts;
-import 'package:cuarantine/rep_series.dart';
 import 'package:cuarantine/rep_chart.dart';
 
 void main() => runApp(MyApp());
