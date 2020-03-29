@@ -78,8 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Image.network(
-                'https://cloud.google.com/images/social-icon-google-cloud-1200-630.png'),
+            Image(image: AssetImage('lib/assets/logo.png')),
             RaisedButton(
               onPressed: () {
                 Navigator.push(
@@ -148,18 +147,11 @@ class ProfileView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Activity Statistics"),
+        title: Text("Weekly Progress Statistics."),
       ),
       body: Center(
         //child: Column(
         child: RepLineChart.withSampleData(),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.pop(context);
-        },
-        tooltip: 'Go Back',
-        child: Icon(Icons.arrow_back),
       ),
     );
   }
